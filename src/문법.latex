@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{../document}
+\begin{document}
+  \LaTeX파일 하나는 하나의 프로그램이다.
+  \subsection{Grammer}
+  프로그래밍 언어 문법은 \verb|BNF|를 통해 나타낸다.
+  다음은 \verb|BNF|를 통해 그 확장인 \verb|EBNF|를 나타낸 것이다.
+  \begin{grammar}
+    <EBNF> ::= <rules> | <rules> <EBNF> 
+
+    <rule> ::= <terminal> `=' <nonterimnal> 
+
+    <terminal> ::= <string>
+
+    <nonterminal> ::= <string>
+      \alt <string><nonterimnal>
+      \alt "[" <nonterimnal> "]"  
+      \alt "(" <nonterimnal> ")" 
+      \alt "{" <nonterimnal> "}" 
+      \alt <nonterimnal>"+"  
+      \alt <nonterimnal>"*" 
+      \alt <nonterimnal> "|" <nonterimnal> 
+
+
+    <sting> ::= `[' | `]' | `{' | `}' | `(' | `)' | `*' | `+' | `|' | other unicode latter
+    \alt <string><string>
+  \end{grammar}  
+  
+\end{document}

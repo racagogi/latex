@@ -1,0 +1,25 @@
+\documentclass{standalone}
+\usepackage{../document}
+\begin{document}
+  유니코드 문자 직접 입력 테스트 kopub 폰트와 noto 폰트를 기본으로 쓰는데 noto는 언어별로 폰트를 다 나눠두었고 kopub는 의외로 지원 안되는 한자가 많다(萁) 등 noto serif의 경우 영어 알파벳, 숫자가 두껍게 나오기 때문에 kopub를 한글 영문 기본 폰트로 하고 다국어는 ad Hoc으로 Noto serif를 설정함
+\subsection{그리스어}
+{\fontspec{Noto Serif} Α α Β β Γ γ Δ δ Ε ε Ϝ ϝ Ζ ζ Η η Θ θ Ι ι Κ κ Λ λ Μ μ Ν ν Ξ ξ Ο ο Π π Ϙ ϙ Ρ ρ Σ σ/ς Τ τ Υ υ Φ φ Χ χ Ψ ψ Ω ω }
+ \subsection{아르메니아어}
+ {\fontspec{Noto Serif Armenian} այբ բեն գիմ } 
+ \subsection{한자}
+ \begin{paracol}{2}
+ 煮豆燃豆萁 \\
+ 豆在釜中泣 \\
+ 本是同根生 \\
+ 相煎何太急 \\
+  \switchcolumn
+  콩대를 태워 콩을 삶으니\\
+  솥 속의 콩이 울고 있구나\\
+  본래 한 뿌리에서 났건만\\
+  어찌 이리 급하게 삶아대는가\\
+ \end{paracol}
+ \subsection{일본어}
+ ご飯が熱い。
+ \subsection{히브리어}
+ {\fontspec{Noto Serif Hebrew} אבגדהוזחטיכךלמנסעפצקרש}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{standalone}
+\usepackage{../document}
+\begin{document}
+
+코드 표시 minted는 listing에 비해 더 많은 언어를 지원하지만 외부 프로그램 pygments를 필요로 한다.
+\begin{lstlisting}[language=haskell,caption=패키지 listings를 사용한 quicksort.hs\cite{tokyonight}]
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x : xs) =
+  let smaller = quicksort [a | a <- xs, a <= x]
+      bigger = quicksort [a | a <- xs, a > x]
+   in smaller ++ [x] ++ bigger
+\end{lstlisting}
+
+\begin{listing}[!ht]
+\begin{minted}[
+    linenos,
+    bgcolor=nordbg,]{elm}
+  module Main exposing (..)
+  type Model
+      = Redirect Session
+      | NotFound Session
+      | Home Home.Model
+      | Login Login.Model
+
+
+  init : Maybe Viewer -> Url -> Nav.Key -> ( Model, Cmd Msg )
+  init maybeViewer url navKey =
+       changeRouteTo (Route.fromUrl url)
+            (Redirect (Session.fromViewer navKey maybeViewer))
+\end{minted}
+  \caption{패키지 minted를 사용한 elm code\cite{nord}}
+\label{listing:3}
+\end{listing}
+
+\end{document}

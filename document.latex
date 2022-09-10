@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{./document}
+\title{\LaTeX\ 정리}
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\listoflistings
+\section{문법}
+\import{src/}{문법.latex}
+\bibliographystyle{unsrt}
+\bibliography{document}
+\end{document}

@@ -1,0 +1,83 @@
+\ProvidesPackage{doc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{standalone}
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{minted}
+\usepackage{paracol}
+\usepackage{geometry}
+\usepackage{syntax}
+\usepackage[hangul]{kotex}
+\date{\today}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{plain}
+\newtheorem{corollary}{Corollary}[theorem]
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[theorem]
+% 시스템 폰트 사용
+% 리눅스의 경우 fc-list | grep 폰트이름 으로 폰트이름 확인가능
+\setmainfont{KoPub바탕체_Pro}
+\setmainhangulfont{KoPub바탕체_Pro}
+\setmainhanjafont {Noto Serif CJK KR Medium}
+\setsansfont{KoPub돋움체_Pro}
+\setsanshangulfont{KoPub돋움체_Pro}
+\setsanshanjafont{Noto Sans CJK KR Medium}
+\setmonofont{JetBrainsMono Nerd Font Mono}
+\setmonohangulfont{Noto Sans Mono CJK KR}
+\setmonohanjafont{Noto Sans Mono CJK KR}
+
+
+\definecolor{foreground}{HTML}{a9b1d6}
+\definecolor{comment}{HTML}{9ece6a}
+\definecolor{background}{HTML}{1a1b26}
+\definecolor{keyword}{HTML}{7aa2f7}
+\definecolor{number}{HTML}{ff9e64}
+\definecolor{nordbg}{HTML}{2E3440}
+
+\lstdefinestyle{tokyonight}{
+backgroundcolor=\color{background},  
+commentstyle=\color{comment},
+keywordstyle=\color{keyword},
+numberstyle=\color{number},
+stringstyle=\color{comment},    
+basicstyle=\footnotesize\ttfamily\color{foreground},   
+frame=l,
+framesep=4.5mm,
+framexleftmargin=2.5mm,
+fillcolor=\color{background},
+breakatwhitespace=false,   
+breaklines=true,            
+captionpos=b,                
+extendedchars=true,           
+keepspaces=true,
+numbers=left,                   
+tabsize=2,                       
+caption= \lstname
+}
+\lstset{style=tokyonight}
+\usemintedstyle{nord}
+\renewcommand\listoflistingscaption{List of source codes}
+\geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm
+ }
+\setlength{\grammarindent}{12em}
